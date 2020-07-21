@@ -1,6 +1,7 @@
-console.log('hello world')
+import Person from './person'
 
-let n1=1;
-let n2=2;
-console.log(n1+n2);
+const p : Person = {name:"Nathan !!" , age : 57};
 
+console.log(p);
+
+ 
