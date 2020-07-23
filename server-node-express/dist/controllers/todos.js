@@ -8,7 +8,6 @@ const createNewId = () => {
 };
 function deleteTodoById(req, res) {
     const index = todos.findIndex((it) => it.id == req.params.id);
-    // --- need to check index is ok
     if (index == -1) {
         res.sendStatus(404);
     }
@@ -30,7 +29,6 @@ function getTodos(req, res) {
 exports.getTodos = getTodos;
 function updateTodoById(req, res) {
     const index = todos.findIndex((it) => it.id == req.params.id);
-    // --- need to check index is ok
     if (index == -1) {
         res.sendStatus(404);
     }

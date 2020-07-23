@@ -8,9 +8,8 @@ const createNewId = (): string => {
   return uuidv4();
 };
 
-export function deleteTodoById(req: Request, res: Response) {
+export function deleteTodoById(req: Request, res: Response) : void{
   const index = todos.findIndex((it) => it.id == req.params.id);
-  // --- need to check index is ok
   if (index == -1) {
     res.sendStatus(404);
   } else {
@@ -19,20 +18,19 @@ export function deleteTodoById(req: Request, res: Response) {
   }
 }
 
-export function createTodo(req: Request, res: Response) {
+export function createTodo(req: Request, res: Response) : void {
   const newTodo: Todo = { id: createNewId(), text: req.body.text };
   todos.push(newTodo);
   res.status(201).send(newTodo);
 }
 
-export function getTodos(req: Request, res: Response) {
+export function getTodos(req: Request, res: Response) : void {
   res.send(todos);
 }
 
-export function updateTodoById(req: Request, res: Response) {
+export function updateTodoById(req: Request, res: Response) : void {
   const index = todos.findIndex((it) => it.id == req.params.id);
   
-  // --- need to check index is ok
   if (index == -1) {
     res.sendStatus(404);
   } else {
