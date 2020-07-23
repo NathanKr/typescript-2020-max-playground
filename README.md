@@ -1,1 +1,1 @@
-# typescript-2020-max-playground
+check slides <a href="https://docs.google.com/presentation/d/1Y9spajwDlXNka2mo6nBAU5wU9ahSm7WRlzKO_uCuNg0/edit?usp=sharing">here</a>

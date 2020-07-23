@@ -1,0 +1,24 @@
+GET http://localhost:8080/todos
+
+
+###
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+    "text" : "todo1 text"
+}
+
+###
+# change the todo id
+DELETE http://localhost:8080/todos/2e381bfb-bd44-4f29-b177-c43ab2d30ca6
+
+
+###
+# change the todo id
+PATCH  http://localhost:8080/todos/9256e259-f790-421c-954e-800b6d9acc88
+Content-Type: application/json
+
+{
+    "text" : "todo1 text changed"
+}
