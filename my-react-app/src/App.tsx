@@ -13,13 +13,10 @@ function App() {
 
   const deleteById = (id : string) => {
     const tmpTodos = [...todos];
-    const resTodoIndex = tmpTodos.findIndex(todo => todo.id === id);
-    if(resTodoIndex !== -1){
-      tmpTodos.splice(resTodoIndex,1);
-      setTodos(tmpTodos);
+    // --- all item with this condition will be return
+    setTodos(tmpTodos.filter(todo => todo.id !== id));
     }
-  }
-  
+   
 
   const addTodo = (todoText : string) => {
     const tmpTodos :  ToDo []= [...todos];
@@ -30,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <NewTodo addTodo={addTodo}/>
+      <br/>
       <ToDoList todos={todos} deleteById={deleteById}/>
     </div>  
   );
